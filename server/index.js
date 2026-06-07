@@ -1,29 +1,35 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import connectDB from './utils/database.js';
-import authRouter from '../server/routes/auth.routes.js'
-import cookieParser from 'cookie-parser';
-const app = express();
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import cookieParser from "cookie-parser"; 
+import connectDB from "./utils/database.js";
+import authRouter from "./routes/auth.routes.js";
+
 dotenv.config();
 
+const app = express();
 
-const port = process.env.PORT||5000;
+const port = process.env.PORT || 3000;
 
-app.use(express.json)
-app.use(cokkie-cookieParser)
-app.use(cors(
-  {origin:"http://localhost:5173/",
-     credentials:true,
-     methods:["GET","POST","PUT","DELETE","OPTIONS"]
-  }
-))
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.use(cookieParser());
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+
+app.get("/", (req, res) => {
+  res.send("Backend Running");
 });
 
-app.use('/api/auth',authRouter)
+app.use("/api/auth", authRouter);
+
+connectDB();
+
 app.listen(port, () => {
-  console.log(` app listening on port ${port}`);
-  connectDB();
+  console.log(`App listening on port ${port}`);
 });
