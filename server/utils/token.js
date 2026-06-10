@@ -9,6 +9,3 @@ export const generateToken = async (userId) => {
     console.log(error);
     };
 };
-
-
-
