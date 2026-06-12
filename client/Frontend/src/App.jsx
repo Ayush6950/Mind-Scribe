@@ -6,6 +6,7 @@ import { getCurrentUser } from '../../../server/controllers/user.controllers'
 
 export const serverUrl = "http://localhost:3000"
 function App() {
+  const dispatch = dispatch()
   useEffect(()=>{ 
     getCurrentUser()
    },[])
