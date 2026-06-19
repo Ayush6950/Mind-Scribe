@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/navbar";
 import { motion } from "framer-motion";
@@ -103,6 +104,9 @@ function Home() {
 
 
             <motion.button
+               
+             onClick={()=>{Navigate("/")}}
+
               whileHover={{
                 scale:1.05
               }}
