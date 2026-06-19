@@ -6,6 +6,8 @@ import axios from "axios";
 
 import { auth, provider } from "../utils/firebase";
 import { serverUrl } from "../App";
+import { useDispatch } from "react-redux";
+import { setUserData } from "../../redux/userSlice";
 
 import {
   BookOpen,
@@ -18,6 +20,7 @@ import {
 function Auth() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
 
 
@@ -38,6 +41,7 @@ function Auth() {
 );
 
       console.log("Auth Successful:", result.data);
+      dispatch(setUserData(result.data));
 
       // Example:
       // navigate("/dashboard");
