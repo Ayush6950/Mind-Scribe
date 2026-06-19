@@ -328,7 +328,7 @@ function Navbar() {
 
 
             onClick={() =>
-              setShowProfile(!showProfile)
+             {setShowProfile(!showProfile)}
             }
 
 
