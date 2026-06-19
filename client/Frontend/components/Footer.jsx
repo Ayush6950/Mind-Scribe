@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 function Footer() {
+ const navigate  = useNavigate();
+
   return (
-    <footer className="bg-black text-white border-t border-white/10">
+    <footer className="bg-black text-white border-t border-black/10">
 
       <div className="
         max-w-7xl
@@ -30,6 +33,7 @@ function Footer() {
         ">
 
           <a 
+             onClick={() =>{navigate("/notes")}}
             href="#"
             className="hover:text-white transition"
           >
@@ -37,11 +41,21 @@ function Footer() {
           </a>
          
           <a 
+           onClick={()=>{navigate("/history")}}
             href="#"
             className="hover:text-white transition"
           >
             History
           </a>
+
+           <a 
+           onClick={()=>{navigate("/pricing")}}
+            href="#"
+            className="hover:text-white transition"
+          >
+            Add Credits
+          </a>
+
          
         </div>
       </div>
