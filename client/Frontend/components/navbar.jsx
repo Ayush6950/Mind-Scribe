@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux"
 import { setUserData } from "../redux/userSlice"
 import axios from "axios"
 import { serverUrl } from "../src/App"
+import { useNavigate } from "react-router-dom"
 function Navbar() {
+  const navigate  = useNavigate()
   const dispatch = useDispatch()
   const { userdata } = useSelector(
     (state) => state.user
@@ -140,8 +142,7 @@ function Navbar() {
           <motion.button
 
 
-            onClick={() =>
-              setShowCredits(!showCredits)
+            onClick={() =>setShowCredits(!showCredits) 
             }
 
 
@@ -267,16 +268,11 @@ function Navbar() {
                 diagrams and PDFs.
 
               </p>
-
-
-
-
               <button
-
-                onClick={() =>
-                  setShowCredits(false)
-                }
-
+               onClick={() => {
+                 setShowCredits(!showCredits);
+                   navigate("/pricing");
+                }}
 
                 className="
                 w-full
@@ -288,12 +284,8 @@ function Navbar() {
                 text-black
                 font-semibold
                 "
-
               >
-
                 Buy More Credits
-
-
               </button>
 
 
@@ -491,6 +483,25 @@ function Navbar() {
 
               </button>
 
+
+
+              <button
+                onClick={()=>{navigate("/history")}}
+                className="
+                mt-4
+                w-full
+                py-2
+                rounded-lg
+                bg-white
+                text-black
+                font-semibold
+                "
+
+              >
+
+                History
+
+              </button>
 
 
             </motion.div>
