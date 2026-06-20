@@ -50,7 +50,6 @@ function Footer() {
 
            <a 
            onClick={()=>{navigate("/pricing")}}
-            href="#"
             className="hover:text-white transition"
           >
             Add Credits
