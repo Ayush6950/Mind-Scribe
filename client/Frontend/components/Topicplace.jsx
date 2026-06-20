@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { generateNotes } from "../src/service/api";
 
 
 export default function Topicplace() {
@@ -13,6 +14,34 @@ export default function Topicplace() {
   const [revisionMode, setRevisionMode] = useState(false);
   const [includeDiagram, setIncludeDiagram] = useState(false);
   const [includeCharts, setIncludeCharts] = useState(false);
+
+
+  const handleSubmit = async () =>{
+    if(!topic.trim()){
+      setError("please enter the topic")
+      return
+    }
+   
+    setError("")
+    setLoading(true)
+    setResult(null)
+
+    try{
+
+      const result = generateNotes{{
+  topic,
+  level,
+  exam,
+  revisionMode,
+  includeDiagram,
+  includeCharts 
+  setResult(result.data)
+  setLoading(false)
+   }}
+    }
+
+
+  }
 
   return (
 
