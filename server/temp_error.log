@@ -11,3 +11,75 @@ Error: Gemini API Error: {
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async generateNotes (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/controllers/generate.controllers.js:55:9)
 
+[2026-06-21T15:38:01.743Z] isAuth Error:
+MongoServerError: E11000 duplicate key error collection: mindscribe.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.handleOk (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:428:16)
+    at async model.save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:667:5)
+    at async Function.create (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:2747:5)
+    at async isAuth (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/middleware/isAuth.js:12:30)
+
+[2026-06-21T15:38:01.960Z] isAuth Error:
+MongoServerError: E11000 duplicate key error collection: mindscribe.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.handleOk (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:428:16)
+    at async model.save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:667:5)
+    at async Function.create (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:2747:5)
+    at async isAuth (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/middleware/isAuth.js:12:30)
+
+[2026-06-21T15:38:45.470Z] isAuth Error:
+MongoServerError: E11000 duplicate key error collection: mindscribe.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.handleOk (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:428:16)
+    at async model.save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:667:5)
+    at async Function.create (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:2747:5)
+    at async isAuth (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/middleware/isAuth.js:12:30)
+
+[2026-06-21T15:38:45.582Z] isAuth Error:
+MongoServerError: E11000 duplicate key error collection: mindscribe.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.handleOk (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:428:16)
+    at async model.save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:667:5)
+    at async Function.create (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:2747:5)
+    at async isAuth (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/middleware/isAuth.js:12:30)
+
+[2026-06-21T15:39:32.649Z] isAuth Error:
+MongoServerError: E11000 duplicate key error collection: mindscribe.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.handleOk (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:428:16)
+    at async model.save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:667:5)
+    at async Function.create (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:2747:5)
+    at async isAuth (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/middleware/isAuth.js:12:30)
+
+[2026-06-21T15:39:34.898Z] isAuth Error:
+MongoServerError: E11000 duplicate key error collection: mindscribe.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.handleOk (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:428:16)
+    at async model.save (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:667:5)
+    at async Function.create (D:\Ayush malviya\learning\Project\MindScribe\server\node_modules\mongoose\lib\model.js:2747:5)
+    at async isAuth (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/middleware/isAuth.js:12:30)
+
