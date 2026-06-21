@@ -24,11 +24,6 @@ const notesSchema = new mongoose.Schema(
         // Student level
         level:{
             type:String,
-            enum:[
-                "Beginner",
-                "Intermediate",
-                "Advanced"
-            ],
             default:"Beginner"
         },
 

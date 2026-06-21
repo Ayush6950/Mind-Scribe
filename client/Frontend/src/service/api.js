@@ -19,6 +19,7 @@ export const generateNotes = async (payload) =>{
         console.log(result.data)
         return result.data
     } catch (error) {
-        console.log(error)
+        console.error("generateNotes Error:", error);
+        throw new Error(error.response?.data?.message || "Failed to generate notes");
     }
 }
