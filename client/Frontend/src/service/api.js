@@ -15,7 +15,7 @@ export  const getCurrentUser  =  async (dispatch)  => {
 
 export const generateNotes = async (payload) =>{
     try {
-        const result  = await axios.post(serverUrl +"api/notes/genrate-notes",payload,{withCredentials:true})
+        const result  = await axios.post(serverUrl + "/api/notes/genrate-notes",payload,{withCredentials:true})
         console.log(result.data)
         return result.data
     } catch (error) {

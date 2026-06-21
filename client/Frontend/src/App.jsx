@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCurrentUser } from './service/api'
 import Pricing from './pages/Pricing'
 import Notes from './pages/Notes'
+import History from './pages/History'
 
 export const serverUrl = "http://localhost:3000"
 function App() {
