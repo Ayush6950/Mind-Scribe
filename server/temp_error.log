@@ -1,0 +1,13 @@
+[2026-06-21T09:06:15.902Z] Generate Notes Error:
+Error: Gemini API Error: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+    at generateGeminiResponse (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/services/gemini.service.js:41:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateNotes (file:///D:/Ayush%20malviya/learning/Project/MindScribe/server/controllers/generate.controllers.js:55:9)
+
