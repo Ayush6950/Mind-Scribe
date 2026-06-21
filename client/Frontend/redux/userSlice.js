@@ -3,15 +3,18 @@ import { createSlice } from '@reduxjs/toolkit'
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-     userdata:null 
+    userdata: null
   },
   reducers: {
-      setUserData:(state,action)=>{
-        state.userdata =action.payload
-      }
-    
-    }
+    setUserData: (state, action) => {
+      state.userdata = action.payload
+    },
+    updateCredits: (state, action) => {
+      state.userdata.credits = action.payload
+    },
+
   }
+}
 )
 
 // Action creators are generated for each case reducer function
