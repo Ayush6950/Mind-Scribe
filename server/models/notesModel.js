@@ -8,7 +8,7 @@ const notesSchema = new mongoose.Schema(
         // Owner of notes
         user:{
             type:mongoose.Schema.Types.ObjectId,
-            ref:"UserModel",
+            ref:"User",
             required:true
         },
 
@@ -112,4 +112,4 @@ const notesSchema = new mongoose.Schema(
 
 const Notes = mongoose.model("Notes", notesSchema);
 
-export default notesModel;
+export default Notes;

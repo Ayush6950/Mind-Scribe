@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRouter);
 app.use("/api/user",userRouter);
-app.use("api/notes",notesRouter)
+app.use("/api/notes",notesRouter)
 
 // Start Server
 app.listen(port, async () => {
