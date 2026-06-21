@@ -32,17 +32,17 @@ function Notes() {
       <motion.div
 
         initial={{
-          opacity:0,
-          y:-20
+          opacity: 0,
+          y: -20
         }}
 
         animate={{
-          opacity:1,
-          y:0
+          opacity: 1,
+          y: 0
         }}
 
         transition={{
-          duration:0.7
+          duration: 0.7
         }}
 
 
@@ -90,7 +90,7 @@ function Notes() {
         <motion.div
 
           whileHover={{
-            scale:1.05
+            scale: 1.05
           }}
 
           onClick={() => navigate("/")}
@@ -184,11 +184,11 @@ function Notes() {
           <motion.button
 
             whileHover={{
-              scale:1.05
+              scale: 1.05
             }}
 
             whileTap={{
-              scale:0.95
+              scale: 0.95
             }}
 
             className="
@@ -241,11 +241,11 @@ function Notes() {
           <motion.button
 
             whileHover={{
-              scale:1.05
+              scale: 1.05
             }}
 
             whileTap={{
-              scale:0.95
+              scale: 0.95
             }}
 
             onClick={() => navigate("/notes")}
@@ -310,7 +310,6 @@ function Notes() {
       {/* Topic Input Section */}
 
       <Topicplace />
-
 
 
     </div>

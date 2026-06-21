@@ -41,18 +41,22 @@ function Auth() {
 );
 
       console.log("Auth Successful:", result.data);
-      dispatch(setUserData(result.data));
+      dispatch(setUserData(result.data.user));
 
       // Example:
       // navigate("/dashboard");
     } catch (error) {
       console.error("Auth Error:", error);
 
-      setError(
-        error.response?.data?.message ||
-          error.message ||
-          "Authentication Failed"
-      );
+      if (error.code === "auth/popup-closed-by-user") {
+        setError("Sign-in window was closed before completion. Please try again.");
+      } else {
+        setError(
+          error.response?.data?.message ||
+            error.message ||
+            "Authentication Failed"
+        );
+      }
     } finally {
       setLoading(false);
     }
