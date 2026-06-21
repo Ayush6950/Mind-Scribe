@@ -1,5 +1,6 @@
 import UserModel from "../models/User.js";
 import Notes from "../models/notesModel.js";
+import fs from "fs";
 
 import { generateNotesPrompt } 
 from "../utils/promptBuilder.js";
@@ -55,15 +56,16 @@ export const generateNotes = async(req,res)=>{
         // Save notes
 
         const notes = await Notes.create({
-
             user:user._id,
             topic,
-            level,
-            exam,
-            revisionMode,
-            includeDiagram,
-            includeCharts,
-            content:aiResponse
+            level: level || "Beginner",
+            exam: exam || "General",
+            settings: {
+                revisionMode: !!revisionMode,
+                includeDiagram: !!includeDiagram,
+                includeCharts: !!includeCharts,
+            },
+            content: JSON.stringify(aiResponse)   // Store as JSON string
         });
         // Reduce credits
         user.credits -= 10;
@@ -89,11 +91,19 @@ export const generateNotes = async(req,res)=>{
     catch(error){
         console.error(
             "Generate Notes Error:",
-            error.message
+            error
         );
+        try {
+            fs.appendFileSync(
+                "temp_error.log",
+                `[${new Date().toISOString()}] Generate Notes Error:\n${error.stack || error}\n\n`
+            );
+        } catch (e) {
+            console.error("Failed to write to temp_error.log:", e);
+        }
         return res.status(500).json({
             success:false,
-            message:"AI generation failed"
+            message: error.message || "AI generation failed"  // Show actual error
         });
     }
 };
