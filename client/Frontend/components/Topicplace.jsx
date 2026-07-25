@@ -640,11 +640,6 @@ export default function Topicplace() {
             focus:border-white/40
           "
         />
-
-
-
-
-
         {/* Exam Type */}
 
         <input
